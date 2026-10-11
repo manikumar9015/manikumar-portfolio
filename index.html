@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#05060a" />
+<title>Mani Kumar — AI & Full-Stack Engineer</title>
+<meta name="description" content="Mani Kumar — graduate software engineer building RAG, agentic AI, and full-stack products. Java · React · FastAPI · LLM systems." />
+<meta property="og:title" content="Mani Kumar — AI & Full-Stack Engineer" />
+<meta property="og:description" content="Graduate engineer building RAG pipelines, agentic AI workflows, and full-stack products." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%237c5cff'/><text x='50' y='68' font-size='58' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'>M</text></svg>" />
+</head>
+<body>
+
+<!-- ══════════ PRELOADER ══════════ -->
+<div id="preloader" class="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__mark">
+      <span class="preloader__bracket">&lt;</span>
+      <span class="preloader__name">Mani<span class="dot">.</span></span>
+      <span class="preloader__bracket">/&gt;</span>
+    </div>
+    <div class="preloader__bar"><span id="preloaderBar"></span></div>
+    <div class="preloader__meta">
+      <span id="preloaderPct">0%</span>
+      <span class="preloader__hint">initialising systems…</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ BACKGROUND LAYERS ══════════ -->
+<div class="bg" aria-hidden="true">
+  <canvas id="particles"></canvas>
+  <div class="bg__aurora">
+    <span class="blob blob--violet"></span>
+    <span class="blob blob--cyan"></span>
+    <span class="blob blob--pink"></span>
+  </div>
+  <div class="bg__grid"></div>
+  <div class="bg__noise"></div>
+  <div class="bg__vignette"></div>
+</div>
+
+<!-- ══════════ CUSTOM CURSOR ══════════ -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"></div>
+  <div class="cursor__label">VIEW</div>
+</div>
+
+<!-- ══════════ SCROLL PROGRESS ══════════ -->
+<div class="scroll-progress"><span id="scrollBar"></span></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav__logo" data-cursor="hide">
+    <span class="nav__logo-mark">M</span>
+    <span class="nav__logo-text">Mani Kumar</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#about" data-nav>About</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#projects" data-nav>Projects</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+  <div class="nav__actions">
+    <a href="assets/Mani_Kumar_Resume.pdf" download class="btn btn--ghost nav__resume" data-cursor="hide">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+      Résumé
+    </a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav class="mobile-menu__links">
+    <a href="#about"><span>01</span>About</a>
+    <a href="#skills"><span>02</span>Skills</a>
+    <a href="#experience"><span>03</span>Experience</a>
+    <a href="#projects"><span>04</span>Projects</a>
+    <a href="#contact"><span>05</span>Contact</a>
+  </nav>
+  <a href="assets/Mani_Kumar_Resume.pdf" download class="btn btn--primary">Download Résumé</a>
+</div>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <div class="hero__grid">
+    <div class="hero__content">
+      <div class="hero__badge" data-reveal>
+        <span class="pulse"></span>
+        Open to full-time roles · 2026 graduate
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line" data-reveal-line>Building</span>
+        <span class="line" data-reveal-line><em class="grad">intelligent</em></span>
+        <span class="line" data-reveal-line>software.</span>
+      </h1>
+
+      <p class="hero__sub" data-reveal>
+        I'm <strong>Mani Kumar</strong> — a graduate software engineer working across
+        <span class="hl">AI &amp; LLM systems</span>, <span class="hl">full-stack</span>, and
+        <span class="hl">test automation</span>. I build products that are close to both the code
+        and the user.
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="#projects" class="btn btn--primary" data-magnetic>
+          <span>View my work</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="btn btn--ghost" data-magnetic>Get in touch</a>
+      </div>
+
+      <ul class="hero__socials" data-reveal>
+        <li><a href="https://github.com/manikumar9015" target="_blank" rel="noopener" aria-label="GitHub" data-cursor="hide">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C17.7 4.9 18.7 5.2 18.7 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/mani-kumar-237b53296" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor="hide">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.5V9h3.6v11.4ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 1 .8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg>
+        </a></li>
+        <li><a href="mailto:manikumar.k2002@gmail.com" aria-label="Email" data-cursor="hide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+        </a></li>
+      </ul>
+    </div>
+
+    <aside class="hero__terminal" data-reveal data-tilt>
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span class="d r"></span><span class="d y"></span><span class="d g"></span>
+          <span class="terminal__title">mani@portfolio — zsh</span>
+        </div>
+        <pre class="terminal__body"><code id="typer"></code><span class="terminal__caret"></span></pre>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><b data-count="8.37" data-decimals="2">0</b><span>CGPA</span></div>
+        <div class="stat"><b data-count="3" data-suffix="+">0</b><span>AI projects</span></div>
+        <div class="stat"><b data-count="2" data-suffix="+">0</b><span>Certifications</span></div>
+      </div>
+    </aside>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll down">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-text">scroll</span>
+  </a>
+</section>
+
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>RAG Pipelines</span><i>◆</i><span>Agentic AI</span><i>◆</i><span>React.js</span><i>◆</i>
+    <span>FastAPI</span><i>◆</i><span>Java</span><i>◆</i><span>Selenium</span><i>◆</i>
+    <span>TestNG</span><i>◆</i><span>Cucumber</span><i>◆</i><span>Node.js</span><i>◆</i>
+    <span>Vector DBs</span><i>◆</i><span>LLM Integration</span><i>◆</i><span>MySQL</span><i>◆</i>
+    <span>RAG Pipelines</span><i>◆</i><span>Agentic AI</span><i>◆</i><span>React.js</span><i>◆</i>
+    <span>FastAPI</span><i>◆</i><span>Java</span><i>◆</i><span>Selenium</span><i>◆</i>
+    <span>TestNG</span><i>◆</i><span>Cucumber</span><i>◆</i><span>Node.js</span><i>◆</i>
+    <span>Vector DBs</span><i>◆</i><span>LLM Integration</span><i>◆</i><span>MySQL</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__index">01</span>
+      <h2 class="section__title" data-reveal>About<span class="grad"> me</span></h2>
+      <p class="section__kicker" data-reveal>Graduate engineer · AI &amp; full-stack</p>
+    </div>
+
+    <div class="about">
+      <div class="about__text">
+        <p class="lead" data-reveal>
+          I recently graduated with a <strong>B.Tech in Information Science &amp; Engineering</strong>
+          and interned at <strong>Cognizant</strong> as a Quality Engineer, where I automated
+          Java-based web tests with Selenium, TestNG, and Cucumber.
+        </p>
+        <p data-reveal>
+          Alongside that, I've independently built projects like a
+          <strong>conversational AI platform</strong> for natural-language SQL and a
+          <strong>personal knowledge agent</strong> using RAG and vector search. I like working
+          close to both the code and the user — which is probably why I ended up doing both
+          QA and full-stack AI work.
+        </p>
+        <p data-reveal>
+          I care about systems that are <em>correct</em>, <em>observable</em>, and genuinely
+          pleasant to use. Right now I'm focused on LLM-powered tooling, agentic workflows,
+          and shipping full-stack products end to end.
+        </p>
+      </div>
+
+      <div class="about__cards">
+        <article class="fcard" data-reveal data-tilt>
+          <div class="fcard__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="m3 7 9 5 9-5M12 22V12"/></svg>
+          </div>
+          <h3>AI &amp; LLM systems</h3>
+          <p>RAG pipelines, prompt engineering, agentic workflows, and vector search.</p>
+        </article>
+        <article class="fcard" data-reveal data-tilt>
+          <div class="fcard__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>
+          </div>
+          <h3>Full-stack engineering</h3>
+          <p>React and Node front-ends over FastAPI and Java services, end to end.</p>
+        </article>
+        <article class="fcard" data-reveal data-tilt>
+          <div class="fcard__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m9 12 2 2 4-4"/><path d="M12 3a9 9 0 1 0 9 9"/><path d="M16 3h5v5"/></svg>
+          </div>
+          <h3>Quality &amp; automation</h3>
+          <p>BDD test frameworks with Selenium, TestNG, Cucumber, and Extent Reports.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SKILLS ══════════ -->
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__index">02</span>
+      <h2 class="section__title" data-reveal>Tech<span class="grad"> stack</span></h2>
+      <p class="section__kicker" data-reveal>The tools I reach for</p>
+    </div>
+
+    <div class="skills">
+      <div class="skillgroup" data-reveal>
+        <h3><span>Languages</span><i></i></h3>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">Java</span>
+          <span class="chip">JavaScript</span><span class="chip">C</span>
+        </div>
+      </div>
+      <div class="skillgroup" data-reveal>
+        <h3><span>Frameworks</span><i></i></h3>
+        <div class="chips">
+          <span class="chip">React.js</span><span class="chip">Node.js</span>
+          <span class="chip">FastAPI</span><span class="chip">TestNG</span>
+          <span class="chip">Cucumber</span>
+        </div>
+      </div>
+      <div class="skillgroup" data-reveal>
+        <h3><span>AI &amp; LLM</span><i></i></h3>
+        <div class="chips">
+          <span class="chip chip--accent">RAG Pipelines</span><span class="chip chip--accent">Prompt Engineering</span>
+          <span class="chip chip--accent">Agentic Workflows</span><span class="chip chip--accent">LLM Integration</span>
+          <span class="chip chip--accent">Vector DBs</span>
+        </div>
+      </div>
+      <div class="skillgroup" data-reveal>
+        <h3><span>Databases &amp; Tools</span><i></i></h3>
+        <div class="chips">
+          <span class="chip">MySQL</span><span class="chip">MongoDB</span>
+          <span class="chip">Supabase</span><span class="chip">JDBC</span>
+          <span class="chip">Hibernate</span><span class="chip">Git</span>
+        </div>
+      </div>
+      <div class="skillgroup" data-reveal>
+        <h3><span>Testing</span><i></i></h3>
+        <div class="chips">
+          <span class="chip">Selenium WebDriver</span><span class="chip">Postman</span>
+          <span class="chip">REST Assured</span><span class="chip">Extent Reports</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ EXPERIENCE ══════════ -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__index">03</span>
+      <h2 class="section__title" data-reveal>Experience &amp;<span class="grad"> education</span></h2>
+      <p class="section__kicker" data-reveal>Where I've worked and studied</p>
+    </div>
+
+    <div class="timeline">
+      <span class="timeline__spine" aria-hidden="true"></span>
+
+      <article class="tl-item" data-reveal>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-card__top">
+            <span class="tl-tag">Work</span>
+            <span class="tl-date">2026</span>
+          </div>
+          <h3>Quality Engineer Intern</h3>
+          <p class="tl-org">Cognizant Technology Solutions</p>
+          <ul>
+            <li>Automated web application tests using Java, Selenium, TestNG, and Cucumber (BDD).</li>
+            <li>Tested REST APIs with Postman and REST Assured — verified responses, status codes, and error handling.</li>
+            <li>Wrote Gherkin feature files to turn business requirements into clear, executable test scenarios.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="tl-item" data-reveal>
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-card__top">
+            <span class="tl-tag tl-tag--edu">Education</span>
+            <span class="tl-date">2023 — 2026</span>
+          </div>
+          <h3>B.Tech, Information Science &amp; Engineering</h3>
+          <p class="tl-org">NMAM Institute of Technology, Nitte</p>
+          <ul>
+            <li>Graduated with a GPA of 8.37.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROJECTS ══════════ -->
+<section class="section section--alt" id="projects">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__index">04</span>
+      <h2 class="section__title" data-reveal>Selected<span class="grad"> work</span></h2>
+      <p class="section__kicker" data-reveal>Things I've built</p>
+    </div>
+
+    <div class="projects">
+
+      <article class="project project--feature" data-reveal data-tilt data-cursor="view">
+        <div class="project__glow" aria-hidden="true"></div>
+        <div class="project__body">
+          <div class="project__meta">
+            <span class="project__no">01</span>
+            <span class="project__flag">Featured</span>
+          </div>
+          <h3>Smart Database Management System</h3>
+          <p class="project__desc">
+            A conversational AI platform for natural-language SQL queries — LLM-powered intent
+            parsing, JWT auth, and role-based access control across multiple databases. Built a
+            dual-agent <em>Generate → Verify → Execute</em> pipeline with AI guardrails, plus
+            Gemini-powered auto-generated charts and sanitised data summaries.
+          </p>
+          <div class="project__tags">
+            <span>RAG</span><span>Agentic AI</span><span>React</span><span>FastAPI</span><span>Gemini</span>
+          </div>
+          <div class="project__links">
+            <a href="https://github.com/manikumar9015" target="_blank" rel="noopener" class="link-arrow">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C17.7 4.9 18.7 5.2 18.7 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+              Source
+            </a>
+            <a href="#contact" class="link-arrow">Ask me about it →</a>
+          </div>
+        </div>
+        <div class="project__art" aria-hidden="true">
+          <div class="art art--db">
+            <div class="art__row"><span class="k">SELECT</span><span class="v">* FROM users;</span></div>
+            <div class="art__row"><span class="k">WHERE</span><span class="v">role = 'admin'</span></div>
+            <div class="art__row art__row--ok"><span class="k">✓ verify</span><span class="v">passed</span></div>
+            <div class="art__row"><span class="k">▁▃▅▂▇</span><span class="v">chart.png</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" data-reveal data-tilt data-cursor="view">
+        <div class="project__glow" aria-hidden="true"></div>
+        <div class="project__body">
+          <div class="project__meta"><span class="project__no">02</span></div>
+          <h3>Coursera Automation Testing Framework</h3>
+          <p class="project__desc">
+            A Selenium + TestNG automation framework for Coursera built on the Page Object Model,
+            with a Cucumber BDD layer and Gherkin scenarios for login, course search, and
+            enrolment flows. Extent Reporter generates HTML reports with pass/fail results and
+            screenshots on failure.
+          </p>
+          <div class="project__tags">
+            <span>Selenium</span><span>TestNG</span><span>Cucumber</span><span>Extent Reports</span>
+          </div>
+          <div class="project__links">
+            <a href="https://github.com/manikumar9015" target="_blank" rel="noopener" class="link-arrow">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C17.7 4.9 18.7 5.2 18.7 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+              Source
+            </a>
+          </div>
+        </div>
+        <div class="project__art" aria-hidden="true">
+          <div class="art art--test">
+            <div class="art__test"><span class="ok">✓</span> login.feature</div>
+            <div class="art__test"><span class="ok">✓</span> search.feature</div>
+            <div class="art__test"><span class="ok">✓</span> enrolment.feature</div>
+            <div class="art__bar"><span></span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" data-reveal data-tilt data-cursor="view">
+        <div class="project__glow" aria-hidden="true"></div>
+        <div class="project__body">
+          <div class="project__meta"><span class="project__no">03</span></div>
+          <h3>Personal Knowledge Agent</h3>
+          <p class="project__desc">
+            A personal knowledge agent built on RAG and vector search — ingests notes and
+            documents, embeds them into a vector store, and answers questions with grounded,
+            source-backed responses.
+          </p>
+          <div class="project__tags">
+            <span>RAG</span><span>Vector DBs</span><span>LLM Integration</span><span>Python</span>
+          </div>
+          <div class="project__links">
+            <a href="https://github.com/manikumar9015" target="_blank" rel="noopener" class="link-arrow">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C17.7 4.9 18.7 5.2 18.7 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+              Source
+            </a>
+          </div>
+        </div>
+        <div class="project__art" aria-hidden="true">
+          <div class="art art--rag">
+            <div class="art__node"></div><div class="art__node"></div>
+            <div class="art__node"></div><div class="art__node"></div>
+            <div class="art__line"></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CERTIFICATIONS ══════════ -->
+<section class="section" id="certs">
+  <div class="container">
+    <div class="section__head">
+      <span class="section__index">05</span>
+      <h2 class="section__title" data-reveal>Certifi<span class="grad">cations</span></h2>
+      <p class="section__kicker" data-reveal>Continued learning</p>
+    </div>
+    <div class="certs">
+      <article class="cert" data-reveal data-tilt>
+        <div class="cert__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg>
+        </div>
+        <h3>Prompt Engineering Foundation</h3>
+        <p class="cert__meta">101-Basics · Cognizant Learning &amp; Development</p>
+        <span class="cert__date">Mar 2026</span>
+      </article>
+      <article class="cert" data-reveal data-tilt>
+        <div class="cert__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></svg>
+        </div>
+        <h3>Enterprise AI Transformation with Context Engineering</h3>
+        <p class="cert__meta">101-Basics · Cognizant Learning &amp; Development</p>
+        <span class="cert__date">Mar 2026</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="section section--contact" id="contact">
+  <div class="container">
+    <div class="contact">
+      <p class="contact__eyebrow" data-reveal>06 — Let's talk</p>
+      <h2 class="contact__title" data-reveal>
+        Have a role or a project in mind?<br />
+        <span class="grad">Let's build something.</span>
+      </h2>
+      <p class="contact__sub" data-reveal>
+        I'm open to full-time engineering roles and interesting collaborations in AI,
+        full-stack, or QA automation. The fastest way to reach me is email.
+      </p>
+      <div class="contact__actions" data-reveal>
+        <a href="mailto:manikumar.k2002@gmail.com" class="btn btn--primary btn--lg" data-magnetic>
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+          <span>manikumar.k2002@gmail.com</span>
+        </a>
+        <a href="assets/Mani_Kumar_Resume.pdf" download class="btn btn--ghost btn--lg" data-magnetic>Download Résumé</a>
+      </div>
+      <ul class="contact__socials" data-reveal>
+        <li><a href="https://github.com/manikumar9015" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/mani-kumar-237b53296" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="tel:+919019950427">+91 90199 50427</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year"></span> Mani Kumar</span>
+    <span class="footer__note">Designed &amp; built from scratch · dark theme, heavy motion</span>
+    <a href="#hero" class="footer__top" data-cursor="hide">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
